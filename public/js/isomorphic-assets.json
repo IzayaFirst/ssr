@@ -1,0 +1,9 @@
+{
+  "marked": {},
+  "chunks": {
+    "main": [
+      "bundle.js",
+      "style.css"
+    ]
+  }
+}
