@@ -12,7 +12,7 @@
 	2.9 MODAL
 	2.10 PANEL
 	2.11 PRICE RANGE SLIDER
-3. HEADER 
+3. HEADER
 	3.1 HEADER TRANSPARENT
 	3.2 LIGHT HEADER
 	3.3 DARK HEADER
@@ -62,7 +62,74 @@
   margin: 0;
   padding: 0;
 }
+.btn-facebook {
+    background: #3A5C99;
+    border-color: #3A5C99;
+    color: #FFFFFF;
+    text-transform: none;
+    font-size: 12px;
+    clear: both;
+    letter-spacing: 1px;
+    min-width: 250px;
+}
+.portlet > .portlet-title {
+    border-bottom: 3px solid #e2e2e2;
+    padding: 0;
+    margin-bottom: 10px;
+    min-height: 41px;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    -ms-border-radius: 2px 2px 0 0;
+    -o-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+}
+.portlet.light > .portlet-title {
+    padding: 0;
+    min-height: 48px;
+}
+.portlet.light .portlet-body {
+    padding-top: 8px;
+}
 
+.portlet > .portlet-body {
+    clear: both;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    -ms-border-radius: 0 0 2px 2px;
+    -o-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+}
+.portlet > .portlet-title > .caption {
+    float: left;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px 0;
+}
+.portlet.light > .portlet-title > .caption {
+    color: #666;
+    padding: 10px 0;
+}
+.font-milestyle {
+    color: #f50 !important;
+}
+
+.portlet.light {
+    padding: 12px 20px 15px 20px;
+    background-color: #fff;
+    border : 1px solid black;
+}
+
+.portlet {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    padding: 0px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -260,9 +327,7 @@ a:focus {
 }
 
 .buttonCustomPrimary {
-  height: 45px;
-  line-height: 45px;
-  border-radius: 4px;
+  height: 34px;
   background-color: #ff891e;
   text-transform: uppercase;
   color: #ffffff !important;
@@ -2013,7 +2078,7 @@ header {
   }
 }
 .lightHeader .navbar-brand {
-  background-image: url("../img/logo-color-big.png");
+  background-image: url("../img/logo.png");
   background-position: 15px 19px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2413,7 +2478,7 @@ header {
   }
 }
 .gridResize .buttonCustomPrimary {
-  margin-top: 4px;
+  /*margin-top: 4px;*/
 }
 
 /*=== 5.3 WHITE SECTION ===*/
@@ -2447,6 +2512,9 @@ header {
   .destinations .media-left {
     width: auto;
   }
+}
+.white{
+  color: white;
 }
 .destinations .media-left img {
   width: 100%;
@@ -2697,7 +2765,7 @@ header {
 .isotopeSelector .overlay .fancybox-pop .overlayInfo {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -2775,7 +2843,7 @@ header {
 
 /*=== 5.4 PAGE TITLE SECTION ===*/
 .pageTitle {
-  background-image: url("../img/pages/page-title-bg.jpg");
+  background-image: url("../img/pages/page.jpg");
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -2783,7 +2851,7 @@ header {
   background-size: cover;
   background-position: center top;
   color: #ffffff;
-  height: 200px;
+  height: 300px;
 }
 @media (max-width: 767px) {
   .pageTitle {
@@ -3320,7 +3388,7 @@ header {
   }
 }
 .lightHeader .navbar-brand {
-  background-image: url("../img/logo-color-big.png");
+  background-image: url("../img/logo.png");
   background-position: 15px 19px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4941,8 +5009,8 @@ header {
 
 /*================= 8.3 BLOG SINGLE POST ==================*/
 .blogSinglePost {
-  border: none;
-  padding: 0;
+  border: 1px solid #bdb7b7;;
+  padding: 25px;
 }
 .blogSinglePost img {
   margin-bottom: 25px;

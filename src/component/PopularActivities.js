@@ -1,25 +1,33 @@
 import React from 'react'
-
+import {Link} from 'react-router'
 class PopularActivities extends React.Component{
+    constructor(props){
+      super(props)
+    }
     render(){
+      var pr = this.props.name.trim();
+      var path = pr.replace(/ /g,"_");
+      console.log(path)
+      var url = '/img/cover/'+path+'.jpg';
       return(
+         <div className="col-sm-4 isotopeSelector">
         <article>
           <figure>
-            <img src="img/home/packages/packages-1.jpg" alt=""/>
-            <h4>Vestibulum Tour</h4>
+            <img src={url} alt=""/>
+            <h4>{this.props.name}</h4>
             <div className="overlay-background">
               <div className="inner"></div>
             </div>
             <div className="overlay">
-              <a className="fancybox-pop" href="single-package-fullwidth.html">
+            <Link className="fancybox-pop" to={'/activity/'+this.props.name} >
               <div className="overlayInfo">
-                <h5>from <span>$399</span></h5>
-                <p><i className="fa fa-calendar" aria-hidden="true"></i>27 Jan, 2017</p>
+                <h5>from <span>{this.props.province}</span></h5>
               </div>
-              </a>
+              </Link>
             </div>
           </figure>
         </article>
+        </div>
       )
     }
 }

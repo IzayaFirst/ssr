@@ -1,6 +1,28 @@
 import React from 'react'
 import PopularActivities from './PopularActivities'
+import 'whatwg-fetch';
+import {Link} from 'react-router'
 class PackageHome extends React.Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+      activity :  []
+    }
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:8000/api/activities/popular', { method: 'GET' }).then(
+      (res) =>  res.json()
+    ).then((res) =>
+       {this.setState({
+         activity : res
+       })
+      }
+    )
+
+  }
+
   render(){
     return(
 <section className="whiteSection">
@@ -14,9 +36,17 @@ class PackageHome extends React.Component{
      </div>
    </div>
    <div className="row isotopeContainer">
-       <div className="col-sm-4 isotopeSelector">
-        <PopularActivities />
-       </div>
+
+       {
+         this.state.activity.map((value , index) => {
+           return(
+                  <PopularActivities name={value.activity_name} key={index} province={value.province} />
+           )
+         })
+       }
+
+
+
    </div>
  </div>
 </section>

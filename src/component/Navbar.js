@@ -16,11 +16,13 @@ class NavBar extends React.Component{
            </button>
            <Link to="/" className="navbar-brand"></Link>
          </div>
-
          <div className="collapse navbar-collapse navbar-ex1-collapse">
            <ul className="nav navbar-nav navbar-right">
-           <li className="active dropdown singleDrop">
-                <Link to="/">Home</Link>
+              <li className="active dropdown singleDrop">
+                  <Link to="/register">REGISTER</Link>
+              </li>
+              <li className="active dropdown singleDrop">
+                  <Link to="/login">LOGIN</Link>
               </li>
            </ul>
          </div>

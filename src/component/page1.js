@@ -3,7 +3,6 @@ import {Link} from 'react-router'
 import Dropzone from 'react-dropzone'
 import request from 'superagent';
 import DropzoneComponent from 'react-dropzone-component';
-import './filepicker.css'
 class Page1 extends React.Component{
 
 
