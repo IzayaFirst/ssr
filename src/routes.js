@@ -9,12 +9,11 @@ import Register from './component/Register'
 import Login from './component/Login'
 
 export default (
-<Route>
-      <Route path="/" component={Home}> </Route>
-     <Route path="/to/:province" component={ActivityResultByProvince} ></Route>
-     <Route path="/activity/:activity_name" component={ActivityDetail}></Route>
-     <Route path="/register" component={Register}></Route>
-     <Route path="/login" component={Login}></Route>
-</Route>
-
+      <Route>
+           <Route path="/" component={Home}> </Route>
+           <Route path="/to/:province" component={ActivityResultByProvince} ></Route>
+           <Route path="/activity/:activity_name" component={ActivityDetail}></Route>
+           <Route path="/register" component={Register}></Route>
+           <Route path="/login" component={Login}></Route>
+      </Route>
 )
