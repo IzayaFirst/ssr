@@ -1181,36 +1181,6 @@ module.exports = ReactComponentTreeHook;
 
 /***/ }),
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * 
- */
-
-
-
-// Trust the developer to only use ReactInstrumentation with a __DEV__ check
-
-var debugTool = null;
-
-if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(193);
-  debugTool = ReactDebugTool;
-}
-
-module.exports = { debugTool: debugTool };
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1297,6 +1267,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright 2016-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ * 
+ */
+
+
+
+// Trust the developer to only use ReactInstrumentation with a __DEV__ check
+
+var debugTool = null;
+
+if (process.env.NODE_ENV !== 'production') {
+  var ReactDebugTool = __webpack_require__(193);
+  debugTool = ReactDebugTool;
+}
+
+module.exports = { debugTool: debugTool };
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 12 */
@@ -3104,7 +3104,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3300,7 +3300,7 @@ var Nav = function (_React$Component) {
                     { className: 'active dropdown singleDrop' },
                     _react2.default.createElement(
                       _reactRouter.Link,
-                      { to: '/CreateActivity' },
+                      { to: "/CreateActivity/" + 1 },
                       'Create Activity'
                     )
                   )
@@ -3558,7 +3558,7 @@ module.exports = DOMLazyTree;
 
 
 var ReactRef = __webpack_require__(207);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
 var warning = __webpack_require__(2);
 
@@ -6874,7 +6874,7 @@ exports.default = runTransitionHook;
 var DOMLazyTree = __webpack_require__(26);
 var Danger = __webpack_require__(170);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(62);
 var setInnerHTML = __webpack_require__(48);
@@ -7703,7 +7703,7 @@ var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactInstanceMap = __webpack_require__(37);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 var ReactUpdates = __webpack_require__(13);
 
 var invariant = __webpack_require__(1);
@@ -9347,7 +9347,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 var _reactDropzone = __webpack_require__(238);
 
@@ -9545,7 +9545,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9616,7 +9616,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10539,7 +10539,7 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 
 var DOMProperty = __webpack_require__(17);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
 var quoteAttributeValueForBrowser = __webpack_require__(234);
 var warning = __webpack_require__(2);
@@ -11286,7 +11286,7 @@ var ReactDOMContainerInfo = __webpack_require__(180);
 var ReactDOMFeatureFlags = __webpack_require__(182);
 var ReactFeatureFlags = __webpack_require__(95);
 var ReactInstanceMap = __webpack_require__(37);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 var ReactMarkupChecksum = __webpack_require__(202);
 var ReactReconciler = __webpack_require__(27);
 var ReactUpdateQueue = __webpack_require__(61);
@@ -13679,7 +13679,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 var _ActivityDetail = __webpack_require__(123);
 
@@ -13727,7 +13727,7 @@ exports.default = _react2.default.createElement(
      _react2.default.createElement(_reactRouter.Route, { path: '/activity/:activity_name', component: _ActivityDetail2.default }),
      _react2.default.createElement(_reactRouter.Route, { path: '/register', component: _Register2.default }),
      _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
-     _react2.default.createElement(_reactRouter.Route, { path: '/CreateActivity', component: _CreateActivity2.default })
+     _react2.default.createElement(_reactRouter.Route, { path: '/CreateActivity/:step', component: _CreateActivity2.default })
 );
 
 /***/ }),
@@ -14087,7 +14087,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14202,6 +14202,8 @@ var _firebase = __webpack_require__(154);
 
 var _firebase2 = _interopRequireDefault(_firebase);
 
+var _reactRouter = __webpack_require__(10);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14219,6 +14221,7 @@ var CreateActivity = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (CreateActivity.__proto__ || Object.getPrototypeOf(CreateActivity)).call(this, props));
 
     _this.state = {
+      step: "",
       name: "",
       desc: "",
       cover: null,
@@ -14226,6 +14229,7 @@ var CreateActivity = function (_React$Component) {
       location: "",
       type: "",
       price: [],
+      routine: [],
       cover_url: "",
       type_file: ""
     };
@@ -14234,28 +14238,38 @@ var CreateActivity = function (_React$Component) {
     _this.setLocation = _this.setLocation.bind(_this);
     _this.setName = _this.setName.bind(_this);
     _this.setDesc = _this.setDesc.bind(_this);
-    var config = {
-      apiKey: "AIzaSyDu0FY6mCxbAek2ZWq-z8WcQvnR0IZJO4Q",
-      authDomain: "miletrav-4f855.firebaseapp.com",
-      databaseURL: "https://miletrav-4f855.firebaseio.com",
-      storageBucket: "miletrav-4f855.appspot.com",
-      messagingSenderId: "469316737513"
-    };
-    _firebase2.default.initializeApp(config);
     return _this;
   }
 
   _createClass(CreateActivity, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.setState({
+        step: this.props.params.step
+      });
+      console.log(this.state.step);
+    }
+  }, {
     key: 'create',
     value: function create(e) {
+      var _this2 = this;
+
       e.preventDefault();
+      var config = {
+        apiKey: "AIzaSyDu0FY6mCxbAek2ZWq-z8WcQvnR0IZJO4Q",
+        authDomain: "miletrav-4f855.firebaseapp.com",
+        databaseURL: "https://miletrav-4f855.firebaseio.com",
+        storageBucket: "miletrav-4f855.appspot.com",
+        messagingSenderId: "469316737513"
+      };
+      _firebase2.default.initializeApp(config);
       var img = this.state.name + "_activity_cover." + this.state.type_file;
-      console.log(img);
       _firebase2.default.storage().ref('activity_cover/' + img).put(this.state.cover).then(function (snapshot) {
-        console.log(snapshot);
         return _firebase2.default.storage().ref('activity_cover' + '/' + img).getDownloadURL();
       }).then(function (url) {
-        console.log(url);
+        _this2.setState({
+          cover_url: url
+        });
       });
       /*var urls = 'activity_cover/'+img;
       console.log(urls)
@@ -14267,10 +14281,29 @@ var CreateActivity = function (_React$Component) {
       */
     }
   }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      this.setState(function (prevState, props) {
+        return {
+          step: nextProps.params.step,
+          name: prevState.name,
+          desc: prevState.desc,
+          cover: prevState.cover,
+          province: prevState.province,
+          location: prevState.location,
+          type: prevState.type,
+          price: prevState.price,
+          routine: prevState.routine,
+          cover_url: prevState.cover_url,
+          type_file: prevState.type_file
+        };
+      });
+      console.log(this.state);
+    }
+  }, {
     key: 'setCity',
     value: function setCity(e) {
       e.preventDefault();
-
       this.setState({
         province: e.target.value
       });
@@ -14302,7 +14335,7 @@ var CreateActivity = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var componentConfig = {
         iconFiletypes: ['.jpg', '.png'],
@@ -14314,7 +14347,7 @@ var CreateActivity = function (_React$Component) {
         addedfile: function addedfile(file) {
           var type = file.name.split('.');
           console.log(type[1]);
-          _this2.setState({
+          _this3.setState({
             cover: file,
             type_file: type[1]
           });
@@ -14335,6 +14368,37 @@ var CreateActivity = function (_React$Component) {
           _react2.default.createElement(
             'div',
             { className: 'container', style: { width: 1024 } },
+            _react2.default.createElement(
+              'ul',
+              { className: 'nav nav-pills' },
+              _react2.default.createElement(
+                'li',
+                { className: this.state.step == 1 ? 'active' : '' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/CreateActivity/' + 1 },
+                  'Step 1'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                { className: this.state.step == 2 ? 'active' : '' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/CreateActivity/' + 2 },
+                  'Step 2'
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                { className: this.state.step == 3 ? 'active' : '' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/CreateActivity/' + 3 },
+                  'Step 3'
+                )
+              )
+            ),
             _react2.default.createElement(
               'div',
               { className: 'col-sm-12 col-xs-12' },
@@ -14378,7 +14442,7 @@ var CreateActivity = function (_React$Component) {
                         _react2.default.createElement(
                           'div',
                           { className: 'col-md-12' },
-                          _react2.default.createElement(
+                          this.state.step == 1 && _react2.default.createElement(
                             'form',
                             { className: 'form-horizontal' },
                             _react2.default.createElement(
@@ -14476,6 +14540,12 @@ var CreateActivity = function (_React$Component) {
                                 )
                               )
                             )
+                          ),
+                          this.state.step == 2 && _react2.default.createElement(
+                            'h1',
+                            null,
+                            'Step ',
+                            this.state.step
                           )
                         )
                       )
@@ -14758,7 +14828,7 @@ __webpack_require__(31);
 
 var _host = __webpack_require__(32);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15016,7 +15086,7 @@ var _PopularActivities2 = _interopRequireDefault(_PopularActivities);
 
 __webpack_require__(31);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 var _host = __webpack_require__(32);
 
@@ -15124,7 +15194,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15232,7 +15302,7 @@ var _Footer2 = _interopRequireDefault(_Footer);
 
 var _host = __webpack_require__(32);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20478,7 +20548,7 @@ module.exports = BeforeInputEventPlugin;
 
 var CSSProperty = __webpack_require__(89);
 var ExecutionEnvironment = __webpack_require__(7);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
 var camelizeStyleName = __webpack_require__(139);
 var dangerousStyleValue = __webpack_require__(226);
@@ -21727,7 +21797,7 @@ var ReactComponentEnvironment = __webpack_require__(59);
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactErrorUtils = __webpack_require__(60);
 var ReactInstanceMap = __webpack_require__(37);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 var ReactNodeTypes = __webpack_require__(99);
 var ReactReconciler = __webpack_require__(27);
 
@@ -22714,7 +22784,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactInstrumentation = __webpack_require__(10);
+  var ReactInstrumentation = __webpack_require__(11);
   var ReactDOMUnknownPropertyHook = __webpack_require__(192);
   var ReactDOMNullInputValuePropHook = __webpack_require__(186);
   var ReactDOMInvalidARIAHook = __webpack_require__(185);
@@ -22764,7 +22834,7 @@ var ReactDOMInput = __webpack_require__(184);
 var ReactDOMOption = __webpack_require__(187);
 var ReactDOMSelect = __webpack_require__(93);
 var ReactDOMTextarea = __webpack_require__(190);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 var ReactMultiChild = __webpack_require__(203);
 var ReactServerRenderingTransaction = __webpack_require__(208);
 
@@ -26226,7 +26296,7 @@ var _prodInvariant = __webpack_require__(4);
 
 var ReactComponentEnvironment = __webpack_require__(59);
 var ReactInstanceMap = __webpack_require__(37);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactReconciler = __webpack_require__(27);
@@ -26815,7 +26885,7 @@ var CallbackQueue = __webpack_require__(90);
 var PooledClass = __webpack_require__(20);
 var ReactBrowserEventEmitter = __webpack_require__(44);
 var ReactInputSelection = __webpack_require__(97);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 var Transaction = __webpack_require__(46);
 var ReactUpdateQueue = __webpack_require__(61);
 
@@ -27091,7 +27161,7 @@ var _assign = __webpack_require__(5);
 
 var PooledClass = __webpack_require__(20);
 var Transaction = __webpack_require__(46);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 var ReactServerUpdateQueue = __webpack_require__(209);
 
 /**
@@ -35247,7 +35317,7 @@ var _reactDom = __webpack_require__(81);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouter = __webpack_require__(11);
+var _reactRouter = __webpack_require__(10);
 
 var _routes = __webpack_require__(122);
 

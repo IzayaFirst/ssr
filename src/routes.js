@@ -15,6 +15,6 @@ export default (
            <Route path="/activity/:activity_name" component={ActivityDetail}></Route>
            <Route path="/register" component={Register}></Route>
            <Route path="/login" component={Login}></Route>
-           <Route path="/CreateActivity" component={CreateActivity}></Route>
+           <Route path="/CreateActivity/:step" component={CreateActivity}></Route>
       </Route>
 )

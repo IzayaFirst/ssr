@@ -91,7 +91,7 @@ class Nav extends React.Component{
                 </ul>
               </li>
              <li className="active dropdown singleDrop">
-                 <Link to="/CreateActivity">Create Activity</Link>
+                 <Link to={"/CreateActivity/"+1}>Create Activity</Link>
              </li>
              </ul>
            </div>
