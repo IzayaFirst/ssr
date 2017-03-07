@@ -2,6 +2,7 @@ import React from 'react'
 import PopularActivities from './PopularActivities'
 import 'whatwg-fetch';
 import {Link} from 'react-router'
+import {host} from './host'
 class PackageHome extends React.Component{
 
   constructor(props){
@@ -12,7 +13,7 @@ class PackageHome extends React.Component{
   }
 
   componentDidMount(){
-    fetch('http://localhost:8000/api/activities/popular', { method: 'GET' }).then(
+    fetch(host+'api/activities/popular', { method: 'GET' }).then(
       (res) =>  res.json()
     ).then((res) =>
        {this.setState({
@@ -36,7 +37,6 @@ class PackageHome extends React.Component{
      </div>
    </div>
    <div className="row isotopeContainer">
-
        {
          this.state.activity.map((value , index) => {
            return(
@@ -44,9 +44,6 @@ class PackageHome extends React.Component{
            )
          })
        }
-
-
-
    </div>
  </div>
 </section>

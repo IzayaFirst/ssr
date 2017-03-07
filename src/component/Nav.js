@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router'
+import {Router , Link , browserHistory} from 'react-router'
 class Nav extends React.Component{
 
       constructor(props){
@@ -8,6 +8,7 @@ class Nav extends React.Component{
           isLogin: false,
           username : ""
         }
+        this.logout = this.logout.bind(this);
       }
 
 
@@ -25,6 +26,13 @@ class Nav extends React.Component{
     }
   }
 
+  logout(e){
+    e.preventDefault();
+    console.log("remove token");
+    localStorage.removeItem('username');
+    localStorage.removeItem('token');
+    browserHistory.replace('/');
+  }
 
 
   render(){
@@ -79,7 +87,7 @@ class Nav extends React.Component{
                   <li><Link to="/Profile">Profile</Link></li>
                   <li><Link to="/Dashboard">Dashboard</Link></li>
                   <li><Link to="/Wishlist">Wishlist</Link></li>
-                  <li><Link to="/Logout">Logout</Link></li>
+                  <li><Link onClick={this.logout}>Logout</Link></li>
                 </ul>
               </li>
              <li className="active dropdown singleDrop">

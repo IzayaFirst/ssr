@@ -1,6 +1,7 @@
 import React  ,{props}from 'react'
 import 'whatwg-fetch';
 import Detail from './detail'
+import {host} from './host';
 class CardActivityDetail extends React.Component {
   constructor(props){
     super(props)
@@ -11,7 +12,7 @@ class CardActivityDetail extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:8000/api/activities/detail/'+this.state.name, { method: 'GET' }).then(
+    fetch(host+'api/activities/detail/'+this.state.name, { method: 'GET' }).then(
       (res) =>  res.json()
     ).then((res) =>
        {this.setState({

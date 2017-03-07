@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import Footer from './Footer'
 import 'whatwg-fetch'
+import {host} from './host'
 import {browserHistory} from 'react-router'
 class Login extends React.Component {
 
@@ -31,7 +32,7 @@ class Login extends React.Component {
 
       login(e){
         e.preventDefault();
-        fetch("http://localhost:8000/api/user/login" , {
+        fetch(host+"api/user/login" , {
           method: 'POST',
            headers: {
               'Content-Type': 'application/json',

@@ -2,6 +2,7 @@ import React from 'react'
 import 'whatwg-fetch';
 import Nav from './Nav'
 import Footer from './Footer'
+import {host} from './host'
 import {browserHistory} from 'react-router'
 
 class Register extends React.Component {
@@ -45,7 +46,7 @@ class Register extends React.Component {
                     register(){
                       console.log('sending');
 
-                        fetch("http://localhost:8000/api/user/register" , {
+                        fetch(host+"api/user/register" , {
                           method: 'POST',
                            headers: {
                              'Content-Type': 'application/json',
