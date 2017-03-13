@@ -19,7 +19,7 @@ module.exports = {
             {
                 test: /\.jsx?$/ ,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loaders: ['react-hot-loader', 'babel-loader']
             } ,    {
               test: /\.(eot|svg|ttf|woff|woff2)$/,
               loader: 'file-loader',
@@ -48,5 +48,11 @@ module.exports = {
         allChunks: true
       })
 
-  ]
+  ],
+  devServer: {
+    historyApiFallback: {
+      index: './'
+    }
+  },
+
 };

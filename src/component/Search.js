@@ -24,7 +24,7 @@ class Search extends React.Component{
               <div className="row gridResize">
                 <div className="col-sm-3 col-xs-12">
                   <div className="sectionTitleDouble">
-                    <p>Choose</p>
+                    <p>Chooseeee</p>
                     <h2>Your <span>City</span></h2>
                   </div>
                 </div>

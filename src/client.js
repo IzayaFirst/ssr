@@ -8,3 +8,14 @@ ReactDOM.render(
     <Router routes={routes} history={browserHistory} />,
     document.getElementById('root')
 );
+
+
+if (module.hot) {
+  module.hot.accept('./routes', () => {
+    const NextApp = require('./routes').default;
+    ReactDOM.render(
+      <NextApp />,
+      rootEl
+    );
+  });
+}
