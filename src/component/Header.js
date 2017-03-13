@@ -13,7 +13,7 @@ class Header extends React.Component{
                  <div className="titleTable">
                    <div className="titleTableInner">
                      <div className="pageTitleInfo">
-                       <h1>Whsssssere ever you go is a part of you somehow</h1>
+                       <h1>Where ever you go is a part of you somehow</h1>
                        <div className="under-border"></div>
                      </div>
                    </div>

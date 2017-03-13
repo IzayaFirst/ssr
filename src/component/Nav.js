@@ -58,6 +58,9 @@ class Nav extends React.Component{
              <li className="active dropdown singleDrop">
                  <Link to="/login">LOGIN</Link>
              </li>
+             <li className="active dropdown singleDrop">
+                 <Link to="/booking">Booking</Link>
+             </li>
              </ul>
            </div>
          </div>

@@ -196,6 +196,60 @@ h4 {
   }
 }
 
+.countUpSection {
+  background-image: url("../img/home/promotion/promotion-2.jpg");
+  background-attachment: fixed;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center !important;
+  color: #ffffff;
+  padding: 130px 0;
+}
+.countUpSection .icon {
+  width: 96px;
+  height: 96px;
+  background-color: rgba(255, 137, 30, 0.9);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.countUpSection .icon i {
+  font-size: 42px;
+  line-height: 96px;
+}
+.countUpSection .counter {
+  line-height: 40px;
+}
+@media (max-width: 767px) {
+  .countUpSection .counter {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .countUpSection .counter {
+    font-size: 52px;
+  }
+}
+.countUpSection h5 {
+  line-height: 21px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .countUpSection h5 {
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) {
+  .countUpSection h5 {
+    font-size: 15px;
+  }
+}
+
 body.bodyColor.wrapper {
   margin: 0 auto;
 }
@@ -6276,4 +6330,8 @@ header {
   padding-left: 20px;
 }
 
+
+div.booking{
+  margin-top: 5%;
+}
 /*# sourceMappingURL=style.css.map */

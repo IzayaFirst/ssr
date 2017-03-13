@@ -129,6 +129,7 @@ class Login extends React.Component {
               </div>
             </section>
             <Footer />
+
       </div>
     )
   }
