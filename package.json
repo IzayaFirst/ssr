@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "webpack-dev-server --hot --inline --content-base ./public --config ./webpack.config.dev.js"
+    "dev": "webpack-dev-server --hot --inline --content-base ./public --config ./webpack.config.dev.js",
+    "build:watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",

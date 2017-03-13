@@ -10,7 +10,7 @@ module.exports = {
     // แล้วตั้งชื่อไฟล์ output ว่า bundle.js
     output: {
         path: path.resolve(__dirname, 'public/js'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
   devtool: 'eval',
     // อ่านไฟล์นามสกุล .js, .jsx ด้วย Babel
@@ -53,6 +53,6 @@ module.exports = {
     historyApiFallback: {
       index: './'
     }
-  },
+  }
 
 };
