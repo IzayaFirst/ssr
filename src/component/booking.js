@@ -19,7 +19,7 @@ export default class Booking extends Component{
               <div className="bookDetailsInfo">
                 <img src="img/booking/booking.png" alt="image"/>
                 <div className="infoArea">
-                  <h3>Maldives Tour</h3>
+                  <h3>Chiangrai Tour</h3>
                   <ul className="list-unstyled">
                     <li><i className="fa fa-calendar" aria-hidden="true"></i>From:  <span>25 Mar, 2016</span></li>
                     <li><i className="fa fa-calendar" aria-hidden="true"></i>To:  <span>28 Mar, 2016</span></li>
